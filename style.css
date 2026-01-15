@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Chewy', cursive;
+  background: #efefea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.screen {
+  position: absolute;
+  width: 480px;        /* was 360px */
+  max-height: 90vh;    /* allows tall content */
+  background: #ffffff;
+  border: 3px solid #222;
+  padding: 24px;       /* slightly more padding */
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.screen.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.cell {
+  height: 95px;        /* was 80px */
+  border: 2px solid #222;
+  cursor: pointer;
+}
+
+
+.blue { background: #5da9e9; }
+.green { background: #7bcf9e; }
+.red { background: #e76f51; }
+.yellow { background: #f4d35e; }
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 2px solid #222;
+  font-family: inherit;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  background: #ddd;
+  border: 2px solid #222;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #222;
+  color: white;
+}
+
+.lists {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 2px solid #222;
+  min-height: 140px;   /* was 80px */
+  max-height: 220px;   /* shows more items */
+  overflow-y: auto;
+}
+
+
+li {
+  padding: 6px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.mode {
+  border: 2px solid #222;
+  padding: 6px;
+  margin: 10px 0;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+h1 {
+  margin-bottom: 6px;
+}
+
+p {
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+body {
+  padding: 20px;
+}
