@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plant Language Control</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="screen-lock" class="screen active">
+  <h1>ADMIN LOCK</h1>
+  <p>Enter color code</p>
+  <div class="grid">
+    <div class="cell blue" data-color="blue"></div>
+    <div class="cell green" data-color="green"></div>
+    <div class="cell red" data-color="red"></div>
+    <div class="cell yellow" data-color="yellow"></div>
+    <div class="cell blue" data-color="blue"></div>
+    <div class="cell green" data-color="green"></div>
+    <div class="cell red" data-color="red"></div>
+    <div class="cell yellow" data-color="yellow"></div>
+    <div class="cell blue" data-color="blue"></div>
+  </div>
+</div>
+
+<div id="screen-admin" class="screen">
+  <h1>VOICE MANAGER</h1>
+
+  <input id="nameInput" placeholder="Recording name">
+  <select id="typeInput">
+    <option value="good">Positive</option>
+    <option value="bad">Negative</option>
+  </select>
+
+  <div class="row">
+    <button id="recordBtn">RECORD</button>
+    <button id="stopBtn">STOP</button>
+  </div>
+
+  <div class="lists">
+    <div>
+      <h2>Positive</h2>
+      <ul id="goodList"></ul>
+    </div>
+    <div>
+      <h2>Negative</h2>
+      <ul id="badList"></ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <button id="exportBtn">EXPORT</button>
+    <input type="file" id="importInput" hidden>
+    <button id="importBtn">IMPORT</button>
+  </div>
+
+  <button id="playBtn" class="primary">EXIT & PLAY</button>
+</div>
+
+<div id="screen-play" class="screen">
+  <h1>PLAYING</h1>
+
+  <div id="modeIndicator" class="mode">MODE: —</div>
+
+  <div class="row">
+    <button id="playGood">PLAY GOOD</button>
+    <button id="playBad">PLAY BAD</button>
+  </div>
+
+  <p id="nowPlaying" class="fade">Waiting…</p>
+
+  <button id="lockBtn">STOP & LOCK</button>
+</div>
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
